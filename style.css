@@ -41,10 +41,14 @@ body {
 
     & .img-product {
         width: 100%;
-        height: 238px;
-        background-image: url(./images/image-product-mobile.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
+        
+        & #product-mobile {
+            width: 100%;
+        }
+        & #product-desktop {
+            display: none;
+        }
+
     }
 }
 .info-container {
@@ -123,18 +127,23 @@ body {
     }
     .main-container {
         width: 60%;
-        display: flex;
         flex-direction: row;
 
        & .img-product {
-            background-image: url(./images/image-product-desktop.jpg);
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-        }
+            width: 50%;
+
+            & #product-mobile {
+                display: none;
+            }
+            & #product-desktop {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+       }
     }
     .main-container .info-container {
-        width: fit-content;
+        width: 50%;
     }
     .attribution {
         display: flex;
